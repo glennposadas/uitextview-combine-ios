@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uitest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y4J-uN-vR6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="t5m-w4-j5E"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Value:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIG-LL-ec0">
+                                <rect key="frame" x="8" y="134" width="398" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BSu-nM-UCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o4N-Oj-jQu">
+                                <rect key="frame" x="0.0" y="244" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bxz-bX-p8g"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-9g-UQi">
+                                <rect key="frame" x="0.0" y="334" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8t7-E5-1hC"/>
+                                </constraints>
+                                <state key="normal" title="Append voice value to final value"/>
+                                <connections>
+                                    <action selector="appendVoiceValueToFinalValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuq-zI-6md"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PIG-LL-ec0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="3UY-jr-JS5"/>
+                            <constraint firstAttribute="trailing" secondItem="y4J-uN-vR6" secondAttribute="trailing" id="5d1-jn-Xta"/>
+                            <constraint firstItem="y4J-uN-vR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dad-bS-qVR"/>
+                            <constraint firstItem="y4J-uN-vR6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hji-7r-CA4"/>
+                            <constraint firstItem="PIG-LL-ec0" firstAttribute="top" secondItem="y4J-uN-vR6" secondAttribute="bottom" constant="10" id="KId-kW-e7w"/>
+                            <constraint firstItem="o4N-Oj-jQu" firstAttribute="top" secondItem="PIG-LL-ec0" secondAttribute="bottom" constant="10" id="Nkr-Gn-0lv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hBR-9g-UQi" secondAttribute="trailing" id="UBN-6c-clT"/>
+                            <constraint firstItem="o4N-Oj-jQu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X5K-cN-27R"/>
+                            <constraint firstItem="hBR-9g-UQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XMc-6j-rGZ"/>
+                            <constraint firstItem="o4N-Oj-jQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iTc-g2-64f"/>
+                            <constraint firstItem="hBR-9g-UQi" firstAttribute="top" secondItem="o4N-Oj-jQu" secondAttribute="bottom" constant="10" id="m5h-lJ-SJR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIG-LL-ec0" secondAttribute="trailing" constant="8" id="ziP-BN-gng"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="PIG-LL-ec0" id="OS4-uN-bJE"/>
+                        <outlet property="textView" destination="y4J-uN-vR6" id="cD7-EL-uKx"/>
+                        <outlet property="voiceTextView" destination="o4N-Oj-jQu" id="oN2-ea-6gX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
